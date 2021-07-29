@@ -2,7 +2,7 @@
     package="com.example.admin_panel_responsive">
    <application
         android:label="admin_panel_responsive"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/launcher_icon">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
