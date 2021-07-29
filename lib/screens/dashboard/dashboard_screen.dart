@@ -1,4 +1,5 @@
 import 'package:admin_panel_responsive/constants.dart';
+import 'package:admin_panel_responsive/screens/dashboard/components/recent_files.dart';
 import 'package:admin_panel_responsive/screens/dashboard/components/header.dart';
 import 'package:admin_panel_responsive/screens/dashboard/components/my_files.dart';
 import 'package:admin_panel_responsive/screens/dashboard/components/storage_details.dart';
@@ -21,13 +22,19 @@ class DashboardScreen extends StatelessWidget {
               ),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
+                children: [
                   Expanded(
                     flex: 5,
-                    child: MyFiles(),
+                    child: Column(
+                      children: const [
+                        MyFiles(),
+                        SizedBox(height: defaultPadding),
+                        RecentFiles(),
+                      ],
+                    ),
                   ),
-                  SizedBox(width: defaultPadding),
-                  Expanded(
+                  const SizedBox(width: defaultPadding),
+                  const Expanded(
                     flex: 2,
                     child: StorageDetails(),
                   ),
